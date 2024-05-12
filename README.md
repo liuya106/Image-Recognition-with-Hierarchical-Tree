@@ -1,5 +1,5 @@
 Image Recognition with Hierarchical Tree
-__Introduction__
+- __Introduction__
 This program provides a time-efficient solution for searching similar images from a massive
 database via the vocabulary tree structure. The idea comes from Nister and Stewenius’
 Paper Scalable Recognition with a Vocabulary Tree [1]. In this project, I took photos of a few
@@ -10,7 +10,7 @@ images, and measured their response time respectively. The time improvement, cut
 minutes to only seconds, is phenomenal. Additionally, it is again proven in this report that
 more vocabulary increases the search accuracy.
 Implementation
-- Web Crawler
+  - Web Crawler
 The first Python script crawler.py performs web scraping on Amazon's website to download
 book cover images with the keyword "sports". Because of Amazon’s bot detection
 mechanism, I have to use GET requests with very detailed headers so that they could
