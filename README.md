@@ -1,7 +1,6 @@
 # Image Recognition with Hierarchical Tree
 
 **Introduction**
-  
 This program provides a time-efficient solution for searching similar images from a massive
 database via the vocabulary tree structure. The idea comes from Nister and Stewenius’
 Paper Scalable Recognition with a Vocabulary Tree [1]. In this project, I took photos of a few
