@@ -1,6 +1,6 @@
 # Image Recognition with Hierarchical Tree
 
-- **Introduction**
+<p style="text-align:center;">**Introduction**</p>
 
 This program provides a time-efficient solution for searching similar images from a massive
 database via the vocabulary tree structure. The idea comes from Nister and Stewenius’
