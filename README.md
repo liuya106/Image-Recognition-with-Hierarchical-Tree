@@ -1,15 +1,18 @@
-Image Recognition with Hierarchical Tree
-- __Introduction__
+# Image Recognition with Hierarchical Tree
+
+**Introduction**
+  
 This program provides a time-efficient solution for searching similar images from a massive
 database via the vocabulary tree structure. The idea comes from Nister and Stewenius’
 Paper Scalable Recognition with a Vocabulary Tree [1]. In this project, I took photos of a few
-book I have in hand, and scraped 100 book cover images from Amazon.com. I built the book
-cover matcher using both single layer k-means clustering (10000 clusters) and vocabulary
+books I have in hand and scraped 100 book cover images from Amazon.com. I built the book
+cover matcher using both single-layer k-means clustering (10000 clusters) and vocabulary
 tree method (4 layers and 10 branches each layer), did a query on them using the test
 images, and measured their response time respectively. The time improvement, cut from
 minutes to only seconds, is phenomenal. Additionally, it is again proven in this report that
-more vocabulary increases the search accuracy.
-Implementation
+more vocabulary increases search accuracy.
+Implementation.
+
   - Web Crawler
 The first Python script crawler.py performs web scraping on Amazon's website to download
 book cover images with the keyword "sports". Because of Amazon’s bot detection
