@@ -12,45 +12,39 @@ minutes to only seconds, is phenomenal. Additionally, it is again proven in this
 more vocabulary increases search accuracy.
 Implementation.
 
+<h2 align="center"><b>Implementation</b></h2>
 
-Introduction
-This program provides a time-efficient solution for searching similar images from a massive
-database via the vocabulary tree structure. The idea comes from Nister and Stewenius’
-Paper Scalable Recognition with a Vocabulary Tree [1]. In this project, I took photos of a few
-book I have in hand, and scraped 100 book cover images from Amazon.com. I built the book
-cover matcher using both single layer k-means clustering (10000 clusters) and vocabulary
-tree method (4 layers and 10 branches each layer), did a query on them using the test
-images, and measured their response time respectively. The time improvement, cut from
-minutes to only seconds, is phenomenal. Additionally, it is again proven in this report that
-more vocabulary increases the search accuracy.
-Implementation
-● Web Crawler
+- Web Crawler
 The first Python script crawler.py performs web scraping on Amazon's website to download
 book cover images with the keyword "sports". Because of Amazon’s bot detection
 mechanism, I have to use GET requests with very detailed headers so that they could
 bypass the detection [1], and then use BeautifulSoup to parse the HTML content of the
 response. I then extract the book titles and cover image URLs from the search results using
-BeautifulSoup's findall and select methods. The book cover images was downloaded to a
-local folder, and metadata was saved to a CSV file using the pandas library. This prepare the
+BeautifulSoup's findall and select methods. The book cover images were downloaded to a
+local folder, and metadata was saved to a CSV file using the pandas library. This prepares the
 dataset of book cover images that we will be querying into later.
-● Feature Extraction
-Each book cover in the dataset is grayscaled first. Then, keypoints (contains coordinates,
+
+- Feature Extraction
+Each book cover in the dataset is grayscaled first. Then, key points (contains coordinates,
 scale, orientation) and descriptors (a n*128 matrix) are extracted using the SIFT
 (Scale-Invariant Feature Transform) algorithm. I adopt Opencv’s implementation of this
 algorithm [2], but you can also refer to my third assignment for the full implementation. Next,
-we will need the help of keypoints and descriptors to train our clustering models and build
+we will need the help of key points and descriptors to train our clustering models and build
 the vocabulary tree.
+
 When I tried to concatenate descriptor matrices from different images, I used
-sorted(os.listdir(path)) to returns a list of filenames. However, the list was sorted
+sorted(os.listdir(path)) to return a list of filenames. However, the list was sorted
 alphabetically instead of numerically, like image1, image10, image100, image11, image12 …
 , which completely messed up the order of the descriptors. This mistake led to some
-completely incorrect search results and took me hours on debugging.
-● Building the Vocabulary Tree
+completely incorrect search results and took me hours to debug.
+
+- Building the Vocabulary Tree
 In tree_builder.py, I build a hierarchical vocabulary tree based on Nister and Stewenius'
 paper [1]. The tree is built recursively with k-means clustering. The root node is initialized
-with all descriptors, and then divided into k clusters. For each cluster, the descriptors closest
+with all descriptors and then divided into k clusters. For each cluster, the descriptors closest
 to the cluster are divided into k sub-clusters. This process is repeated until there are L
 layers.
+
 In terms of the tree structure, each node has a center, which is the mean of the descriptors
 in that node. Each node also has a list of children, which are the nodes that resulted from
 dividing the descriptors in that node. The tree is built recursively, with each node being a
