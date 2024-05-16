@@ -14,8 +14,8 @@ Implementation.
 
 <h2 align="center"><b>Implementation</b></h2>
 
-- Web Crawler
-The first Python script crawler.py performs web scraping on Amazon's website to download
+- **Web Crawler**
+  - The first Python script crawler.py performs web scraping on Amazon's website to download
 book cover images with the keyword "sports". Because of Amazon’s bot detection
 mechanism, I have to use GET requests with very detailed headers so that they could
 bypass the detection [1], and then use BeautifulSoup to parse the HTML content of the
@@ -24,7 +24,8 @@ BeautifulSoup's findall and select methods. The book cover images were downloade
 local folder, and metadata was saved to a CSV file using the pandas library. This prepares the
 dataset of book cover images that we will be querying into later.
 
-- Feature Extraction
+- **Feature Extraction**
+  
 Each book cover in the dataset is grayscaled first. Then, key points (contains coordinates,
 scale, orientation) and descriptors (a n*128 matrix) are extracted using the SIFT
 (Scale-Invariant Feature Transform) algorithm. I adopt Opencv’s implementation of this
