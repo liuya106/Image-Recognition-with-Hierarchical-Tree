@@ -123,13 +123,18 @@ If we run against 10000 clusters, it takes nearly 20 minutes for the query to fi
 but less than half a minute for the tree.
 
 Cover of The Champion's Mind from Amazon.com:
+
 ![book64](https://github.com/liuya106/Image-Recognition-with-Hierarchical-Tree/assets/60202222/78b94e99-3f21-4d9a-af80-0b2e2939e22a)
 
 The book in my hand:
+
 ![test2](https://github.com/liuya106/Image-Recognition-with-Hierarchical-Tree/assets/60202222/99abcbf0-5d1f-41c1-9e8f-e8460894abce)
 
 The book on a chair, slightly oblique:
+
 ![test1](https://github.com/liuya106/Image-Recognition-with-Hierarchical-Tree/assets/60202222/382f55c6-6750-49ca-bfe1-a3c5fbf3fd07)
+
+Time Efficiency: 
 
 ![image](https://github.com/liuya106/Image-Recognition-with-Hierarchical-Tree/assets/60202222/ff469edd-2ace-4e30-ae80-a4a6e4be2f82)
 
