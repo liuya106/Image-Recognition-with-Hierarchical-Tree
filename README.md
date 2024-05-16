@@ -138,9 +138,7 @@ Time Efficiency:
 
 ![image](https://github.com/liuya106/Image-Recognition-with-Hierarchical-Tree/assets/60202222/ff469edd-2ace-4e30-ae80-a4a6e4be2f82)
 
-Therefore, it is strongly evident that search time witnessed a tremendous improvement
-in switching from one-layer clustering to multiple-layer tree structure. Our implementation of
-this data structure was proven to be significantly more time-efficient
+Therefore, it is strongly evident that the multiple-layer tree structure guarantees tremendous progress in search time and tree-building time. Our implementation of this improved unsupervised learning algorithm was proven to be significantly more time-efficient.
 
 
 
